@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineMedia Showcase - Experiencia Interactiva</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Librerias externas via CDN -->
+    <script src="cdn-sweetalert2-v11.js"></script>
+    <script src="cdn-canvas-confetti.js"></script>
+    <!-- Script propio de los estudiantes -->
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <h1>CineMedia Showcase</h1>
+        <button id="btnTheme" class="btn-secondary">Modo Oscuro</button>
+      </div>
+    </header>
+    <main class="main-container">
+      <!-- Galería de Proyectos Multimedia -->
+      <section id="galeria" class="section">
+        <h2>Proyectos Destacados</h2>
+        <div class="cards-grid">
+          <article class="card" id="card-1">
+            <h3>Cortometraje: Ecos del Valle</h3>
+            <p>Una experiencia inmersiva sobre la biodiversidad regional.</p>
+            <div class="card-actions">
+              <button class="btn-like" data-id="1">
+                Me gusta (<span class="like-count">0</span>)
+              </button>
+            </div>
+          </article>
+          <article class="card" id="card-2">
+            <h3>Animacion 3D: CyberCity 2026</h3>
+            <p>Modelado y renderizado procedural en tiempo real.</p>
+            <div class="card-actions">
+              <button class="btn-like" data-id="2">
+                Me gusta (<span class="like-count">0</span>)
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- Formulario de Valoración -->
+      <section id="interaccion" class="section">
+        <h2>Deja tu Valoracion Multimedia</h2>
+        <form id="formFeedback" class="feedback-form" novalidate>
+          <div class="form-group">
+            <label for="autor">Tu Nombre Completo:</label>
+            <input
+              type="text"
+              id="autor"
+              name="autor"
+              placeholder="Ej. Ana Maria Silva"
+            />
+          </div>
+          <div class="form-group">
+            <label for="proyecto">Selecciona el Proyecto:</label>
+            <select id="proyecto" name="proyecto">
+              <option value="">-- Seleccionar --</option>
+              <option value="Ecos del Valle">Ecos del Valle</option>
+              <option value="CyberCity 2026">CyberCity 2026</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="comentario">Comentario / Critica Tecnica:</label>
+            <textarea
+              id="comentario"
+              name="comentario"
+              rows="3"
+              placeholder="Escribe tu opinion..."
+            ></textarea>
+          </div>
+          <button type="submit" id="btnEnviar" class="btn-primary">
+            Publicar Valoracion
+          </button>
+        </form>
+        <div id="comentariosContainer" class="comments-list">
+          <h3>Comentarios en Vivo</h3>
+          <p id="sinComentarios" class="empty-msg">
+            No hay valoraciones registradas aun.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        Desarrollo de Experiencias Multimedia para la Web. Taller Colaborativo
+        de JS.
+      </p>
+    </footer>
+  </body>
+</html>
